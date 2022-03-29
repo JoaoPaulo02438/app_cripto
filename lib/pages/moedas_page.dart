@@ -124,7 +124,8 @@ class _MoedasPageState extends State<MoedasPage> {
                     ),
                   ),
                   //Incluir icone ao lado da moeda favorita
-                  if (favoritas.lista.contains(tabela[moeda]))
+                  if (favoritas.lista
+                      .any((fav) => fav.sigla == tabela[moeda].sigla))
                     Icon(Icons.circle, color: Colors.red, size: 9),
                 ],
               ),
